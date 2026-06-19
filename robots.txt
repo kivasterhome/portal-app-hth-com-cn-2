@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://kivasterhome.github.io/portal-app-hth-com-cn-2/sitemap.xml
