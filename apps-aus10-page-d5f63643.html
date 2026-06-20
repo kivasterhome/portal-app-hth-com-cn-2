@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>澳洲幸运10 – 站点介绍与可靠说明</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+      background: linear-gradient(145deg, #fdf3e0 0%, #fce4c8 50%, #f7d9b0 100%);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 0 20px;
+    }
+
+    .page-wrapper {
+      max-width: 1100px;
+      width: 100%;
+      margin: 0 auto;
+      padding: 20px 0 60px;
+    }
+
+    /* 顶部导航 */
+    .navbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: rgba(255, 248, 238, 0.8);
+      backdrop-filter: blur(6px);
+      padding: 16px 30px;
+      border-radius: 60px;
+      box-shadow: 0 6px 18px rgba(150, 100, 50, 0.08);
+      margin-bottom: 40px;
+    }
+
+    .nav-brand {
+      font-weight: 600;
+      font-size: 1.3rem;
+      color: #7d5a3a;
+      letter-spacing: 0.5px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 28px;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: #5f4a33;
+      font-weight: 500;
+      font-size: 1rem;
+      transition: color 0.2s;
+      border-radius: 30px;
+      padding: 6px 12px;
+    }
+
+    .nav-links a:hover {
+      color: #b47b4a;
+      background: rgba(180, 123, 74, 0.08);
+    }
+
+    /* 卡片层 */
+    .card {
+      background: #fffffffa;
+      backdrop-filter: blur(2px);
+      border-radius: 40px;
+      padding: 42px 38px 46px;
+      margin-bottom: 32px;
+      box-shadow: 0 12px 30px rgba(110, 70, 30, 0.07);
+      border: 1px solid rgba(255, 235, 210, 0.5);
+    }
+
+    .hero-card {
+      background: linear-gradient(105deg, #ffffff 0%, #fffaf2 100%);
+      padding: 50px 44px 52px;
+    }
+
+    h1 {
+      font-size: 2.3rem;
+      font-weight: 600;
+      color: #4d3422;
+      letter-spacing: -0.02em;
+      line-height: 1.25;
+      margin-bottom: 20px;
+    }
+
+    .hero-sub {
+      font-size: 1.1rem;
+      color: #6b4d31;
+      max-width: 660px;
+      line-height: 1.6;
+      margin-bottom: 28px;
+    }
+
+    .hero-cta-sentence {
+      font-size: 1.05rem;
+      background: #fcf3e9;
+      display: inline-block;
+      padding: 12px 28px;
+      border-radius: 60px;
+      color: #543f2b;
+      border: 1px solid #ecdac8;
+    }
+
+    .hero-cta-sentence a {
+      color: #9b6d42;
+      font-weight: 600;
+      text-decoration: none;
+      border-bottom: 2px solid #deb887;
+      transition: border-color 0.2s;
+    }
+
+    .hero-cta-sentence a:hover {
+      border-bottom-color: #a16a3a;
+    }
+
+    .section-title {
+      font-size: 1.6rem;
+      font-weight: 500;
+      color: #4f3724;
+      margin-bottom: 24px;
+      letter-spacing: -0.3px;
+      position: relative;
+      display: inline-block;
+    }
+
+    .section-title::after {
+      content: '';
+      display: block;
+      width: 50px;
+      height: 4px;
+      background: #dbb68a;
+      border-radius: 4px;
+      margin-top: 6px;
+    }
+
+    .feature-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+      margin-top: 10px;
+    }
+
+    .feature-item {
+      background: #faf5ee;
+      border-radius: 28px;
+      padding: 28px 22px 30px;
+      transition: all 0.2s ease;
+      border: 1px solid #f0e2d2;
+    }
+
+    .feature-item:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 20px rgba(120, 75, 35, 0.08);
+    }
+
+    .feature-item h3 {
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: #6b4c30;
+      margin-bottom: 12px;
+    }
+
+    .feature-item p {
+      font-size: 0.96rem;
+      line-height: 1.6;
+      color: #5a4331;
+    }
+
+    .note-block {
+      background: #fcf6ef;
+      border-radius: 28px;
+      padding: 28px 32px;
+      margin: 28px 0 10px;
+      border-left: 5px solid #dbb087;
+    }
+
+    .note-block p {
+      font-size: 1rem;
+      line-height: 1.7;
+      color: #4e3b2a;
+    }
+
+    .faq-mini {
+      margin-top: 24px;
+    }
+
+    .faq-item {
+      border-bottom: 1px solid #eedbcb;
+      padding: 18px 0 16px;
+    }
+
+    .faq-item:last-child {
+      border-bottom: none;
+    }
+
+    .faq-q {
+      font-weight: 600;
+      font-size: 1.05rem;
+      color: #5c402b;
+      margin-bottom: 6px;
+    }
+
+    .faq-a {
+      font-size: 0.96rem;
+      line-height: 1.6;
+      color: #5e4a38;
+    }
+
+    .footer-note {
+      text-align: center;
+      color: #7d664f;
+      font-size: 0.9rem;
+      padding: 20px 0 10px;
+      opacity: 0.75;
+    }
+
+    .btn-link {
+      display: inline-block;
+      background: #eddccb;
+      color: #4f3a28;
+      padding: 10px 28px;
+      border-radius: 60px;
+      font-weight: 500;
+      text-decoration: none;
+      transition: background 0.2s, box-shadow 0.2s;
+      border: 1px solid #dfcbb6;
+    }
+
+    .btn-link:hover {
+      background: #e0cbb4;
+      box-shadow: 0 4px 12px rgba(140, 90, 40, 0.12);
+    }
+
+    @media (max-width: 800px) {
+      .feature-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+      .navbar {
+        flex-wrap: wrap;
+        gap: 12px;
+        padding: 14px 22px;
+      }
+      .nav-links {
+        gap: 14px;
+        flex-wrap: wrap;
+      }
+      .hero-card {
+        padding: 36px 24px;
+      }
+      h1 {
+        font-size: 1.8rem;
+      }
+    }
+
+    @media (max-width: 540px) {
+      .feature-grid {
+        grid-template-columns: 1fr;
+      }
+      .card {
+        padding: 28px 18px;
+      }
+      .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        border-radius: 32px;
+      }
+      .nav-links {
+        margin-top: 8px;
+      }
+      .hero-cta-sentence {
+        font-size: 0.95rem;
+        padding: 10px 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+<div class="page-wrapper">
+
+  <!-- 导航栏 -->
+  <nav class="navbar">
+    <span class="nav-brand">✦ 澳洲幸运10</span>
+    <div class="nav-links">
+      <a href="#intro">介绍</a>
+      <a href="#scenes">场景</a>
+      <a href="#faq">说明</a>
+    </div>
+  </nav>
+
+  <!-- Hero 区 / 核心介绍 -->
+  <div class="card hero-card" id="intro">
+    <h1>关于 <span style="color: #b47a4b;">澳洲幸运10</span> 的一点介绍</h1>
+    <div class="hero-sub">
+      这是一个提供数字信息与内容参考的站点，围绕「澳洲幸运10」主题聚合了多种实用资料与基础说明。我们更愿意将它看作是一个轻量信息站，帮助对相关领域感兴趣的朋友快速了解基础脉络。
+    </div>
+    <div class="hero-cta-sentence">
+      如果您希望直接访问 <a href="https://apps-aus10.com">澳洲幸运10</a>，可以随时通过上方链接进入站点，浏览完整内容。
+    </div>
+  </div>
+
+  <!-- 三个场景模块 -->
+  <div class="card" id="scenes">
+    <div class="section-title">常见使用场景</div>
+    <div class="feature-grid">
+      <div class="feature-item">
+        <h3>📖 信息查阅</h3>
+        <p>日常查看关于澳洲幸运10的基础资料、规则摘要以及常见疑问。站点结构简洁，便于快速定位需要的内容板块。</p>
+      </div>
+      <div class="feature-item">
+        <h3>🔍 参考与对比</h3>
+        <p>当您希望横向了解不同来源或不同阶段的信息时，可以借助站内整理的内容进行对照和梳理，辅助形成自己的判断。</p>
+      </div>
+      <div class="feature-item">
+        <h3>📌 内容收藏与分享</h3>
+        <p>将页面中有价值的段落或说明保存下来，或直接分享给有相同兴趣的朋友，让信息流动更自然。</p>
+      </div>
+    </div>
+
+    <div class="note-block">
+      <p>💡 站点内容均基于公开信息整理，编者保持中立客观的整理态度，不构成任何投资或行为建议。请结合自身情况理性参考。</p>
+    </div>
+  </div>
+
+  <!-- 常见说明 / FAQ摘要 -->
+  <div class="card" id="faq">
+    <div class="section-title">常见说明</div>
+    <div class="faq-mini">
+      <div class="faq-item">
+        <div class="faq-q">站点主要提供什么内容？</div>
+        <div class="faq-a">围绕「澳洲幸运10」主题，收录了相关的规则介绍、术语解释、常见问题及部分背景说明，方便用户集中查阅。</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">信息更新频率如何？</div>
+        <div class="faq-a">站点会根据需要不定期补充和优化已有内容，但不会频繁变动基础框架。建议以页面实际展示为准。</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">是否可以信任站内信息？</div>
+        <div class="faq-a">所有内容均经过基础核对与整理，但我们仍建议用户在重要决策前通过多个渠道交叉确认。本站不承担因信息使用而产生的连带责任。</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">如何快速回到首页？</div>
+        <div class="faq-a">您可以直接点击导航栏中的品牌名称，或通过浏览器书签保存 <a href="https://apps-aus10.com" style="color: #9b6d42; text-decoration: underline;">澳洲幸运10</a> 链接，方便随时回来。</div>
+      </div>
+    </div>
+
+    <div style="margin-top: 28px; text-align: right;">
+      <a href="https://apps-aus10.com" class="btn-link">澳洲幸运10</a>
+    </div>
+  </div>
+
+  <!-- 页脚轻提示 -->
+  <div class="footer-note">
+    <span>—— 温和、清晰、可信赖 · 澳洲幸运10 介绍页 ——</span>
+  </div>
+
+</div>
+</body>
+</html>
